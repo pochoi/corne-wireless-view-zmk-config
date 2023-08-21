@@ -21,22 +21,22 @@
 
             label = "Base";
             bindings = <
-         &kp TAB  &kp Q  &kp W     &kp E  &kp R      &kp T              &kp Y  &kp U                   &kp I                &kp O               &kp P  &kp BACKSLASH
-   &kp BACKSPACE  &kp A  &kp S     &kp D  &kp F      &kp G              &kp H  &kp J                   &kp K                &kp L            &kp SEMI        &kp SQT
-&mt LSHFT ESCAPE  &kp Z  &kp X     &kp C  &kp V      &kp B              &kp N  &kp M  &mt LEFT_CONTROL COMMA  &mt LEFT_ALT PERIOD  &mt LEFT_GUI SLASH      &kp ENTER
-                                &kp LGUI  &mo 2  &kp SPACE    &mt LSHFT SPACE  &mo 3        &kp LEFT_CONTROL
+         &kp TAB  &kp Q  &kp W             &kp E  &kp R      &kp T              &kp Y  &kp U                   &kp I                &kp O               &kp P  &kp BACKSLASH
+   &kp BACKSPACE  &kp A  &kp S             &kp D  &kp F      &kp G              &kp H  &kp J                   &kp K                &kp L            &kp SEMI        &kp SQT
+&mt LSHFT ESCAPE  &kp Z  &kp X             &kp C  &kp V      &kp B              &kp N  &kp M  &mt LEFT_CONTROL COMMA  &mt LEFT_ALT PERIOD  &mt LEFT_GUI SLASH      &kp ENTER
+                                &kp LEFT_CONTROL  &mo 2  &kp SPACE    &mt LSHFT SPACE  &mo 3            &kp LEFT_GUI
             >;
         };
 
-        base_layer_linux {
+        base_layer_mac {
             bindings = <
-&trans  &trans  &trans            &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans            &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans            &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans
-                        &kp LEFT_CONTROL  &trans  &trans    &trans  &trans  &kp LGUI
+&trans  &trans  &trans        &trans  &trans  &trans    &trans  &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans  &trans  &trans    &trans  &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans  &trans  &trans    &trans  &trans            &trans  &trans  &trans  &trans
+                        &kp LEFT_GUI  &trans  &trans    &trans  &trans  &kp LEFT_CONTROL
             >;
 
-            label = "BaseL";
+            label = "BaseM";
         };
 
         number_layer {
@@ -49,7 +49,7 @@
             label = "Number";
             bindings = <
 &trans  &sk LEFT_CONTROL  &kp N7  &kp N8  &kp N9     &kp N0     &kp QUESTION       &kp SLASH    &kp BACKSLASH          &kp PIPE      &kp GRAVE  &kp BSLH
-&trans      &sk LEFT_ALT  &kp N4  &kp N5  &kp N6  &kp COMMA         &kp HOME       &kp PG_DN        &kp PG_UP           &kp END  &kp SEMICOLON   &kp SQT
+&trans      &sk LEFT_ALT  &kp N4  &kp N5  &kp N6  &kp COMMA         &kp LEFT        &kp DOWN     &kp UP_ARROW         &kp RIGHT  &kp SEMICOLON   &kp SQT
 &trans          &sk LGUI  &kp N1  &kp N2  &kp N3    &kp DOT    &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN      &kp SLASH    &trans
                                   &trans  &trans     &trans           &trans           &mo 4           &trans
             >;
