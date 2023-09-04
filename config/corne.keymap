@@ -14,10 +14,10 @@
 
         layer_left {
             bindings = <
-&kp BACKSPACE   &kp Q      &kp W  &kp E  &kp R  &kp T          &trans  &trans  &trans  &trans  &trans  &trans
-&sk LEFT_CONTROL&kp A      &kp S  &kp D  &kp F  &kp G          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp ENTER  &kp X  &kp C  &kp V  &kp B          &trans  &trans  &trans  &trans  &trans  &trans
-                                  &mo 3  &mo 2  &lt 1 SPACE    &trans  &trans  &trans
+&kp BACKSPACE   &kp Q      &kp W  &kp E  &kp R  &kp T    &trans  &trans  &trans  &trans  &trans  &trans
+&sk LEFT_CONTROL&kp A      &kp S  &kp D  &kp F  &kp G    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp SPACE  &kp X  &kp C  &kp V  &kp B    &trans  &trans  &trans  &trans  &trans  &trans
+                                  &mo 3  &mo 2  &mo 1    &trans  &trans  &trans
             >;
 
             label = "Left";
@@ -25,10 +25,10 @@
 
         layer_right {
             bindings = <
-&trans&kp P          &kp O    &kp I      &kp U  &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
-&trans&kp Z          &kp L    &kp K      &kp J  &kp H     &trans  &trans  &trans  &trans  &trans  &trans
-&trans&kp SEMICOLON  &kp DOT  &kp COMMA  &kp M  &kp N     &trans  &trans  &trans  &trans  &trans  &trans
-                              &mo 5      &mo 4  &trans    &trans  &trans  &trans
+&trans&kp P      &kp O    &kp I      &kp U  &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
+&trans&kp Z      &kp L    &kp K      &kp J  &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+&trans&kp ENTER  &kp DOT  &kp COMMA  &kp M  &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                          &mo 5      &mo 4  &trans    &trans  &trans  &trans
             >;
 
             label = "Right";
@@ -36,10 +36,10 @@
 
         layer_number {
             bindings = <
-&trans&kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0      &trans  &trans  &trans  &trans  &trans  &trans
-&trans&kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH    &trans  &trans  &trans  &trans  &trans  &trans
-&trans&kp SQT    &kp N1  &kp N2  &kp N3  &kp BSLH    &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans  &trans      &trans  &trans  &trans
+&trans&kp EQUAL      &kp N7  &kp N8  &kp N9  &kp N0      &trans  &trans  &trans  &trans  &trans  &trans
+&trans&kp MINUS      &kp N4  &kp N5  &kp N6  &kp FSLH    &trans  &trans  &trans  &trans  &trans  &trans
+&trans&kp SEMICOLON  &kp N1  &kp N2  &kp N3  &kp BSLH    &trans  &trans  &trans  &trans  &trans  &trans
+                             &trans  &trans  &trans      &trans  &trans  &trans
             >;
 
             label = "Number";
@@ -47,9 +47,9 @@
 
         layer_arrow {
             bindings = <
-&trans          &kp GRAVE     &trans            &kp K_VOLUME_UP    &kp K_VOLUME_DOWN  &kp K_MUTE    &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &kp TAB       &kp ESCAPE        &kp K_VOLUME_UP    &kp K_VOLUME_DOWN  &kp K_MUTE    &trans  &trans  &trans  &trans  &trans  &trans
 &sk LEFT_CONTROL&sk LEFT_ALT  &kp LEFT          &kp UP             &kp DOWN           &kp RIGHT     &trans  &trans  &trans  &trans  &trans  &trans
-&sk LEFT_SHIFT  &sk LEFT_GUI  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TAB            &kp ESCAPE    &trans  &trans  &trans  &trans  &trans  &trans
+&sk LEFT_SHIFT  &sk LEFT_GUI  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SQT            &kp GRAVE     &trans  &trans  &trans  &trans  &trans  &trans
                                                 &trans             &trans             &trans        &trans  &trans  &trans
             >;
 
