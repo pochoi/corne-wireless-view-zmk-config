@@ -73,10 +73,10 @@
 
         layer_base_reverse {
             bindings = <
-&kp BSLH&kp P     &kp O    &kp I         &kp U  &kp Y        &kp T      &kp R  &kp E             &kp W  &kp Q  &kp TAB
-&kp SQT &kp SEMI  &kp L    &kp K         &kp J  &kp H        &kp G      &kp F  &kp D             &kp S  &kp A  &kp BSPC
-&kp RET &kp FSLH  &kp DOT  &kp COMMA     &kp M  &kp N        &kp B      &kp V  &kp C             &kp X  &kp Z  &kp LSHFT
-                           &kp LEFT_GUI  &mo 6  &kp LSHFT    &kp SPACE  &mo 5  &kp LEFT_CONTROL
+&kp BSLH&kp P     &kp O    &kp I         &kp U  &kp Y                   &kp T      &kp R  &kp E             &kp W  &kp Q  &kp TAB
+&kp SQT &kp SEMI  &kp L    &kp K         &kp J  &kp H                   &kp G      &kp F  &kp D             &kp S  &kp A  &kp BSPC
+&kp RET &kp FSLH  &kp DOT  &kp COMMA     &kp M  &kp N                   &kp B      &kp V  &kp C             &kp X  &kp Z  &mt LEFT_SHIFT ESCAPE
+                           &kp LEFT_GUI  &mo 6  &mt LEFT_SHIFT SPACE    &kp SPACE  &mo 5  &kp LEFT_CONTROL
             >;
 
             label = "BaseR";
@@ -84,10 +84,10 @@
 
         layer_number_reverse {
             bindings = <
-&trans&trans  &kp QUESTION   &kp SLASH       &kp BACKSLASH    &kp PIPE            &sk LEFT_CONTROL  &kp N7  &kp N8  &kp N9  &kp N0     &trans
-&trans&trans  &kp LEFT       &kp UP          &kp DOWN         &kp RIGHT           &sk LEFT_ALT      &kp N4  &kp N5  &kp N6  &kp COMMA  &trans
-&trans&trans  &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN    &sk LEFT_GUI      &kp N1  &kp N2  &kp N3  &kp DOT    &trans
-                             &trans          &mo 7            &trans              &trans            &trans  &trans
+&trans&sk LEFT_CONTROL  &kp QUESTION   &kp SLASH       &kp BACKSLASH    &kp PIPE            &sk LEFT_CONTROL  &kp N7  &kp N8  &kp N9  &kp N0     &trans
+&trans&sk LEFT_ALT      &kp LEFT       &kp UP          &kp DOWN         &kp RIGHT           &sk LEFT_ALT      &kp N4  &kp N5  &kp N6  &kp COMMA  &trans
+&trans&sk LEFT_GUI      &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN    &sk LEFT_GUI      &kp N1  &kp N2  &kp N3  &kp DOT    &trans
+                                       &trans          &mo 7            &trans              &trans            &trans  &trans
             >;
 
             label = "NumR";
@@ -95,10 +95,10 @@
 
         layer_symbol_reverse {
             bindings = <
-&trans&trans  &kp EQUAL         &kp PLUS              &kp MINUS              &kp UNDERSCORE       &sk LEFT_CONTROL  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans&trans  &kp LEFT          &kp UP                &kp DOWN               &kp RIGHT            &sk LEFT_ALT      &kp CARET        &kp PERCENT   &kp CARET             &kp GRAVE              &trans
-&trans&trans  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET    &kp LEFT_GUI      &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp TILDE              &trans
-                                &trans                &trans                 &trans               &trans            &mo 7            &trans
+&trans&sk LEFT_CONTROL  &kp EQUAL         &kp PLUS              &kp MINUS              &kp UNDERSCORE       &sk LEFT_CONTROL  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans&sk LEFT_ALT      &kp LEFT          &kp UP                &kp DOWN               &kp RIGHT            &sk LEFT_ALT      &kp CARET        &kp PERCENT   &kp CARET             &kp GRAVE              &trans
+&trans&sk LEFT_GUI      &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET    &kp LEFT_GUI      &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp TILDE              &trans
+                                          &trans                &trans                 &trans               &trans            &mo 7            &trans
             >;
 
             label = "SymR";
