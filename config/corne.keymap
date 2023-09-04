@@ -56,13 +56,15 @@
             label = "Arrow";
         };
 
-        layer_5 {
+        layer_macro {
             bindings = <
 &trans&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                       &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "Macro";
         };
 
         layer_bt {
