@@ -10,6 +10,7 @@
 
 &mt {
     global-quick-tap;
+    flavor = "tap-preferred";
 };
 
 / {
