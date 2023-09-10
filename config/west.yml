@@ -2,14 +2,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: pochoi
+      url-base: https://github.com/pochoi
     - name: jyojoh
       url-base: https://github.com/jyojoh
     - name: PraeceptorXS
       url-base: https://github.com/PraeceptorXS
   projects:
     - name: zmk
-      remote: PraeceptorXS
-      revision: main
+      remote: pochoi
+      revision: nicecat
       import: app/west.yml
   self:
     path: config
