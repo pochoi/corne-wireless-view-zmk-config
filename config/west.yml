@@ -4,9 +4,11 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: jyojoh
       url-base: https://github.com/jyojoh
+    - name: PraeceptorXS
+      url-base: https://github.com/PraeceptorXS
   projects:
     - name: zmk
-      remote: jyojoh
+      remote: PraeceptorXS
       revision: main
       import: app/west.yml
   self:
