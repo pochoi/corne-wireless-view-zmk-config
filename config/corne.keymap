@@ -104,10 +104,10 @@
 
         layer_base_reverse {
             bindings = <
-&kp BSLH  &kp P     &kp O    &kp I         &kp U  &kp Y                   &kp T      &kp R  &kp E             &kp W  &kp Q  &kp TAB
-&kp SQT   &kp SEMI  &kp L    &kp K         &kp J  &kp H                   &kp G      &kp F  &kp D             &kp S  &kp A  &kp BSPC
-&kp RET   &kp FSLH  &kp DOT  &kp COMMA     &kp M  &kp N                   &kp B      &kp V  &kp C             &kp X  &kp Z  &mt LEFT_SHIFT ESCAPE
-                             &kp LEFT_GUI  &mo 6  &mt LEFT_SHIFT SPACE    &kp SPACE  &mo 5  &kp LEFT_CONTROL
+&kp BSLH  &kp P     &kp O    &kp I         &kp U  &kp Y                        &kp T      &kp R  &kp E             &kp W  &kp Q  &kp TAB
+&kp SQT   &kp SEMI  &kp L    &kp K         &kp J  &kp H                        &kp G      &kp F  &kp D             &kp S  &kp A  &kp BSPC
+&kp RET   &kp FSLH  &kp DOT  &kp COMMA     &kp M  &kp N                        &kp B      &kp V  &kp C             &kp X  &kp Z  &mt_hold RSHFT ESCAPE
+                             &kp LEFT_GUI  &mo 6  &mt_hold LEFT_SHIFT SPACE    &kp SPACE  &mo 5  &kp LEFT_CONTROL
             >;
 
             label = "BaseR";
