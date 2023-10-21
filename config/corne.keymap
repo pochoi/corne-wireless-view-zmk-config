@@ -121,7 +121,7 @@
             bindings = <
 &none  &none  &none   &none   &none   &trans    &none       &none              &none            &none  &none  &tog 1
 &none  &none  &trans  &trans  &none   &none     &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &none  &none  &tog 4
-&mo 8  &none  &trans  &trans  &trans  &none     &none       &none              &none            &none  &none  &tog 10
+&mo 8  &none  &trans  &trans  &trans  &none     &none       &none              &none            &none  &none  &tog 9
                       &trans  &trans  &none     &none       &trans             &trans
             >;
 
@@ -145,7 +145,7 @@
 &kp BACKSPACE     &kp Q      &kp W  &kp E  &kp R  &kp T    &kp Y  &kp U  &kp I      &kp O    &kp P    &kp BSPC
 &kp LEFT_CONTROL  &kp A      &kp S  &kp D  &kp F  &kp G    &kp H  &kp J  &kp K      &kp L    &kp Z    &kp LCTRL
 &kp LEFT_SHIFT    &kp SPACE  &kp X  &kp C  &kp V  &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp RET  &kp LSHFT
-                                    &mo 13  &mo 12  &sl 11    &sl 16  &mo 17  &mo 18
+                                    &mo 12  &mo 11  &sl 10    &sl 15  &mo 16  &mo 17
             >;
 
             label = "LL";
@@ -156,7 +156,7 @@
 &trans  &kp P      &kp O      &kp I      &kp U  &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp Z      &kp L      &kp K      &kp J  &kp H     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp ENTER  &kp COMMA  &kp COMMA  &kp M  &kp N     &trans  &trans  &trans  &trans  &trans  &trans
-                              &mo 15      &mo 14  &trans    &trans  &trans  &trans
+                              &mo 14      &mo 13  &trans    &trans  &trans  &trans
             >;
 
             label = "LR";
@@ -211,7 +211,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp T   &kp R  &kp E   &kp W  &kp Q      &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp G   &kp F  &kp D   &kp S  &kp A      &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp B   &kp V  &kp C   &kp X  &kp SPACE  &trans
-                        &trans  &trans  &trans    &trans  &mo 19  &mo 20
+                        &trans  &trans  &trans    &trans  &mo 18  &mo 19
             >;
 
             label = "RL";
