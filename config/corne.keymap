@@ -140,7 +140,7 @@
 &kp BACKSPACE     &kp Q      &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P    &kp BSPC
 &kp LEFT_CONTROL  &kp A      &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp Z    &kp LCTRL
 &kp LEFT_SHIFT    &kp SPACE  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp RET  &kp LSHFT
-                                    &mo 12  &mo 11  &sl 10    &sl 15  &mo 16  &mo 17
+                                    &mo 12  &mo 11  &mo 10    &mo 15  &mo 16  &mo 17
             >;
 
             label = "LL";
@@ -148,10 +148,10 @@
 
         layer_right {
             bindings = <
-&trans  &kp P      &kp O      &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp Z      &kp L      &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp ENTER  &kp COMMA  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
-                              &mo 14     &mo 13  &trans    &trans  &trans  &trans
+&trans  &kp P      &kp O      &kp I    &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Z      &kp L      &kp K    &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ENTER  &kp COMMA  &kp DOT  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                              &mo 14   &mo 13  &trans    &trans  &trans  &trans
             >;
 
             label = "LR";
