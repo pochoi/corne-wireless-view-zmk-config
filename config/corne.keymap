@@ -22,7 +22,7 @@
 &kp BACKSPACE     &kp Q      &kp W  &kp E  &kp R  &kp T    &kp Y  &kp U  &kp I      &kp O    &kp P    &kp BSPC
 &kp LEFT_CONTROL  &kp A      &kp S  &kp D  &kp F  &kp G    &kp H  &kp J  &kp K      &kp L    &kp Z    &kp LCTRL
 &kp LEFT_SHIFT    &kp SPACE  &kp X  &kp C  &kp V  &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp RET  &kp LSHFT
-                                    &mo 3  &mo 2  &mo 1    &mo 6  &mo 7  &mo 8
+                                    &mo 3  &mo 2  &sl 1    &mo 6  &mo 7  &mo 8
             >;
 
             label = "LL";
@@ -30,10 +30,10 @@
 
         layer_right {
             bindings = <
-&trans  &kp P      &kp O    &kp I      &kp U  &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp Z      &kp L    &kp K      &kp J  &kp H     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp ENTER  &kp DOT  &kp COMMA  &kp M  &kp N     &trans  &trans  &trans  &trans  &trans  &trans
-                            &mo 5      &mo 4  &trans    &trans  &trans  &trans
+&trans  &kp P      &kp O      &kp I      &kp U  &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Z      &kp L      &kp K      &kp J  &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ENTER  &kp COMMA  &kp COMMA  &kp M  &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                              &mo 5      &mo 4  &trans    &trans  &trans  &trans
             >;
 
             label = "LR";
@@ -85,9 +85,9 @@
 
         layer_left_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp T   &kp R  &kp E   &kp W  &kp Q  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp G   &kp F  &kp D   &kp S  &kp A  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp B   &kp V  &kp C   &kp X  &kp Z  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp T   &kp R  &kp E   &kp W  &kp Q      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp G   &kp F  &kp D   &kp S  &kp A      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp B   &kp V  &kp C   &kp X  &kp SPACE  &trans
                         &trans  &trans  &trans    &trans  &mo 9  &mo 10
             >;
 
