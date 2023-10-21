@@ -140,7 +140,7 @@
 &kp LEFT_ALT      &kp Q      &kp W  &kp E             &kp R         &kp T     &kp Y   &kp U         &kp I             &kp O    &kp P           &kp LEFT_ALT
 &kp LEFT_CONTROL  &kp A      &kp S  &kp D             &kp F         &kp G     &kp H   &kp J         &kp K             &kp L    &kp Z           &kp LCTRL
 &kp LEFT_GUI      &kp LSHFT  &kp X  &kp C             &kp V         &kp B     &kp N   &kp M         &kp COMMA         &kp DOT  &kp LEFT_SHIFT  &kp LGUI
-                                    &lt 12 BACKSPACE  &lt 11 SPACE  &mo 10    &mo 15  &lt 16 SPACE  &lt 17 BACKSPACE
+                                    &lt 12 BACKSPACE  &lt 11 SPACE  &mo 10    &mo 14  &lt 15 SPACE  &lt 16 BACKSPACE
             >;
 
             label = "LL";
@@ -151,7 +151,7 @@
 &trans  &kp P   &kp O      &kp I    &kp U      &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp Z   &kp L      &kp K    &kp J      &kp H     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp COMMA  &kp DOT  &kp M      &kp N     &trans  &trans  &trans  &trans  &trans  &trans
-                           &mo 14   &kp ENTER  &trans    &trans  &trans  &trans
+                           &mo 13   &kp ENTER  &trans    &trans  &trans  &trans
             >;
 
             label = "LR";
@@ -179,17 +179,6 @@
             label = "LA";
         };
 
-        layer_macro {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "LM";
-        };
-
         layer_bt_1 {
             bindings = <
 &to 0  &none  &none         &none         &none         &bt BT_CLR    &none  &none  &none  &none  &none  &none
@@ -206,7 +195,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp T   &kp R      &kp E   &kp W  &kp Q   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp G   &kp F      &kp D   &kp S  &kp A   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp B   &kp V      &kp C   &kp X  &trans  &trans
-                        &trans  &trans  &trans    &trans  &kp ENTER  &mo 19
+                        &trans  &trans  &trans    &trans  &kp ENTER  &mo 17
             >;
 
             label = "RL";
@@ -232,17 +221,6 @@
             >;
 
             label = "RA";
-        };
-
-        layer_macro_2 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "RM";
         };
 
         layer_bt_2 {
