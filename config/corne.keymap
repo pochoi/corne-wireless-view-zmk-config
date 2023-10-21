@@ -14,15 +14,138 @@
 };
 
 / {
+    behaviors {
+        mt_balanced: mt_balanced {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_BALANCED";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            global-quick-tap;
+            flavor = "balanced";
+        };
+        mt_hold: mt_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_HOLD";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            global-quick-tap;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
+
+        base_layer {
+            label = "Base";
+            bindings = <
+&kp TAB                     &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y                      &kp U  &kp I                   &kp O                &kp P               &kp BACKSLASH
+&kp BACKSPACE               &kp A  &kp S  &kp D             &kp F  &kp G        &kp H                      &kp J  &kp K                   &kp L                &kp SEMI            &kp SQT
+&mt_hold LEFT_SHIFT ESCAPE  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N                      &kp M  &mt LEFT_CONTROL COMMA  &mt LEFT_ALT PERIOD  &mt LEFT_GUI SLASH  &kp ENTER
+                                          &kp LEFT_CONTROL  &mo 2  &kp SPACE    &mt_hold LEFT_SHIFT SPACE  &mo 3  &kp LEFT_GUI
+            >;
+        };
+
+        base_layer_mac {
+            bindings = <
+&trans  &trans  &trans  &trans        &trans  &trans    &trans  &trans  &trans            &trans  &trans  &trans
+&trans  &trans  &trans  &trans        &trans  &trans    &trans  &trans  &trans            &trans  &trans  &trans
+&trans  &trans  &trans  &trans        &trans  &trans    &trans  &trans  &trans            &trans  &trans  &trans
+                        &kp LEFT_GUI  &trans  &trans    &trans  &trans  &kp LEFT_CONTROL
+            >;
+
+            label = "BasM";
+        };
+
+        number_layer {
+            label = "Number";
+            bindings = <
+&trans  &sk LEFT_CONTROL  &kp N7  &kp N8  &kp N9  &kp N0       &kp QUESTION   &kp SLASH       &kp BACKSLASH    &kp PIPE          &kp GRAVE      &kp BSLH
+&trans  &sk LEFT_ALT      &kp N4  &kp N5  &kp N6  &kp COMMA    &kp LEFT       &kp DOWN        &kp UP_ARROW     &kp RIGHT         &kp SEMICOLON  &kp SQT
+&trans  &sk LGUI          &kp N1  &kp N2  &kp N3  &kp DOT      &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp SLASH      &trans
+                                  &trans  &trans  &trans       &trans         &mo 7           &trans
+            >;
+        };
+
+        symbol_layer {
+            label = "Symbol";
+            bindings = <
+&trans  &sk LEFT_CONTROL  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL         &kp PLUS              &kp MINUS              &kp UNDERSCORE     &kp TILDE     &kp PIPE
+&trans  &sk LEFT_ALT      &kp DOLLAR       &kp PERCENT   &kp CARET             &kp GRAVE                &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT          &kp COLON     &kp DOUBLE_QUOTES
+&trans  &sk LEFT_GUI      &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp TILDE                &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp QUESTION  &trans
+                                           &trans        &mo 7                 &trans                   &trans            &trans                &trans
+            >;
+        };
+
+        layer_base_reverse {
+            bindings = <
+&kp BSLH  &kp P     &kp O    &kp I         &kp U  &kp Y                        &kp T      &kp R  &kp E             &kp W  &kp Q  &kp TAB
+&kp SQT   &kp SEMI  &kp L    &kp K         &kp J  &kp H                        &kp G      &kp F  &kp D             &kp S  &kp A  &kp BSPC
+&kp RET   &kp FSLH  &kp DOT  &kp COMMA     &kp M  &kp N                        &kp B      &kp V  &kp C             &kp X  &kp Z  &mt_hold RSHFT ESCAPE
+                             &kp LEFT_GUI  &mo 6  &mt_hold LEFT_SHIFT SPACE    &kp SPACE  &mo 5  &kp LEFT_CONTROL
+            >;
+
+            label = "BasR";
+        };
+
+        layer_number_reverse {
+            bindings = <
+&trans  &sk LEFT_CONTROL  &kp QUESTION   &kp SLASH       &kp BACKSLASH    &kp PIPE            &sk LEFT_CONTROL  &kp N7  &kp N8  &kp N9  &kp N0     &trans
+&trans  &sk LEFT_ALT      &kp LEFT       &kp UP          &kp DOWN         &kp RIGHT           &sk LEFT_ALT      &kp N4  &kp N5  &kp N6  &kp COMMA  &trans
+&trans  &sk LEFT_GUI      &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN    &sk LEFT_GUI      &kp N1  &kp N2  &kp N3  &kp DOT    &trans
+                                         &trans          &mo 7            &trans              &trans            &trans  &trans
+            >;
+
+            label = "NumR";
+        };
+
+        layer_symbol_reverse {
+            bindings = <
+&trans  &sk LEFT_CONTROL  &kp EQUAL         &kp PLUS              &kp MINUS              &kp UNDERSCORE       &sk LEFT_CONTROL  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &sk LEFT_ALT      &kp LEFT          &kp UP                &kp DOWN               &kp RIGHT            &sk LEFT_ALT      &kp CARET        &kp PERCENT   &kp CARET             &kp GRAVE              &trans
+&trans  &sk LEFT_GUI      &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET    &kp LEFT_GUI      &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp TILDE              &trans
+                                            &trans                &trans                 &trans               &trans            &mo 7            &trans
+            >;
+
+            label = "SymR";
+        };
+
+        setup_layer {
+            bindings = <
+&none  &none  &none   &none   &none   &trans    &none       &none              &none            &none  &none  &tog 1
+&none  &none  &trans  &trans  &none   &none     &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &none  &none  &tog 4
+&mo 8  &none  &trans  &trans  &trans  &none     &none       &none              &none            &none  &none  &tog 10
+                      &trans  &trans  &none     &none       &trans             &trans
+            >;
+
+            label = "Setup";
+        };
+
+        layer_bt {
+            bindings = <
+&trans  &trans  &trans        &trans        &trans        &bt BT_CLR    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &bt BT_SEL 3  &bt BT_SEL 4  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans        &trans        &trans        &trans  &trans  &trans
+            >;
+
+            label = "BT";
+        };
+
 
         layer_left {
             bindings = <
 &kp BACKSPACE     &kp Q      &kp W  &kp E  &kp R  &kp T    &kp Y  &kp U  &kp I      &kp O    &kp P    &kp BSPC
 &kp LEFT_CONTROL  &kp A      &kp S  &kp D  &kp F  &kp G    &kp H  &kp J  &kp K      &kp L    &kp Z    &kp LCTRL
 &kp LEFT_SHIFT    &kp SPACE  &kp X  &kp C  &kp V  &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp RET  &kp LSHFT
-                                    &mo 3  &mo 2  &sl 1    &mo 6  &mo 7  &mo 8
+                                    &mo 13  &mo 12  &sl 11    &sl 16  &mo 17  &mo 18
             >;
 
             label = "LL";
@@ -33,7 +156,7 @@
 &trans  &kp P      &kp O      &kp I      &kp U  &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp Z      &kp L      &kp K      &kp J  &kp H     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp ENTER  &kp COMMA  &kp COMMA  &kp M  &kp N     &trans  &trans  &trans  &trans  &trans  &trans
-                              &mo 5      &mo 4  &trans    &trans  &trans  &trans
+                              &mo 15      &mo 14  &trans    &trans  &trans  &trans
             >;
 
             label = "LR";
@@ -74,7 +197,7 @@
 
         layer_bt {
             bindings = <
-&trans  &trans  &trans        &trans        &trans        &bt BT_CLR    &trans  &trans  &trans  &trans  &trans  &trans
+&tog 1  &trans  &trans        &trans        &trans        &bt BT_CLR    &trans  &trans  &trans  &trans  &trans  &tog 1
 &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 4  &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &trans  &trans  &trans  &trans  &trans  &trans
                               &trans        &trans        &trans        &trans  &trans  &trans
@@ -88,7 +211,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp T   &kp R  &kp E   &kp W  &kp Q      &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp G   &kp F  &kp D   &kp S  &kp A      &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp B   &kp V  &kp C   &kp X  &kp SPACE  &trans
-                        &trans  &trans  &trans    &trans  &mo 9  &mo 10
+                        &trans  &trans  &trans    &trans  &mo 19  &mo 20
             >;
 
             label = "RL";
@@ -129,7 +252,7 @@
 
         layer_bt_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_CLR  &trans        &trans        &trans        &trans  &trans
+&tog 1  &trans  &trans  &trans  &trans  &trans    &bt BT_CLR  &trans        &trans        &trans        &trans  &tog 1
 &trans  &trans  &trans  &trans  &trans  &trans    &trans      &bt BT_SEL 3  &bt BT_SEL 4  &trans        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans
                         &trans  &trans  &trans    &trans      &trans        &trans
