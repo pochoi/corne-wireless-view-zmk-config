@@ -13,6 +13,10 @@
     global-quick-tap;
 };
 
+&lt {
+    require-prior-idle-ms = <125>;
+};
+
 / {
     behaviors {
         mt_balanced: mt_balanced {
