@@ -153,10 +153,10 @@
 
         layer_right {
             bindings = <
-&trans  &kp P   &kp O      &kp I    &kp U      &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp Z   &kp L      &kp K    &kp J      &kp H     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp COMMA  &kp DOT  &kp M      &kp N     &trans  &trans  &trans  &trans  &trans  &trans
-                           &mo 13   &kp ENTER  &trans    &trans  &trans  &trans
+&trans  &kp P   &kp O      &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Z   &kp L      &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp COMMA  &kp DOT    &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                           &kp ENTER  &trans  &mo 13    &trans  &trans  &trans
             >;
 
             label = "LR";
@@ -197,10 +197,10 @@
 
         layer_left_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp T   &kp R      &kp E   &kp W  &kp Q   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp G   &kp F      &kp D   &kp S  &kp A   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp B   &kp V      &kp C   &kp X  &trans  &trans
-                        &trans  &trans  &trans    &trans  &kp ENTER  &mo 17
+&trans  &trans  &trans  &trans  &trans  &trans    &kp T   &kp R      &kp E      &kp W  &kp Q   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp G   &kp F      &kp D      &kp S  &kp A   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp B   &kp V      &kp C      &kp X  &trans  &trans
+                        &trans  &trans  &trans    &mo 17  &kp ENTER  &kp ENTER
             >;
 
             label = "RL";
