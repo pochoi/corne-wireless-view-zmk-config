@@ -30,6 +30,7 @@
             global-quick-tap;
             flavor = "balanced";
         };
+
         mt_hold: mt_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_HOLD";
@@ -69,7 +70,7 @@
             label = "Number";
             bindings = <
 &trans  &sk LGUI   &kp N7  &kp N8  &kp N9  &kp N0       &kp QUESTION   &kp SLASH       &kp BACKSLASH    &kp PIPE          &kp GRAVE      &kp BSLH
-&trans  &sk LCTRL  &kp N4  &kp N5  &kp N6  &kp COMMA    &kp LEFT       &kp DOWN        &kp UP_ARROW     &kp RIGHT         &kp SEMICOLON  &kp SQT
+&trans  &sk LCTRL  &kp N4  &kp N5  &kp N6  &kp COMMA    &kp HOME       &kp PAGE_DOWN   &kp PAGE_UP      &kp END           &kp SEMICOLON  &kp SQT
 &trans  &sk LALT   &kp N1  &kp N2  &kp N3  &kp DOT      &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp SLASH      &trans
                            &trans  &trans  &mo 7        &trans         &trans          &trans
             >;
@@ -120,10 +121,10 @@
 
         setup_layer {
             bindings = <
-&tog 1  &none  &none   &none            &none              &trans        &none       &none              &none            &none  &none  &tog 1
-&tog 4  &none  &trans  &kp K_VOLUME_UP  &kp K_VOLUME_DOWN  &kp K_MUTE    &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &none  &none  &tog 4
-&tog 9  &none  &trans  &trans           &trans             &mo 8         &none       &none              &none            &none  &none  &tog 9
-                       &trans           &trans             &none         &none       &trans             &trans
+&tog 1  &kp F1   &kp F2   &kp F3           &kp F4             &kp F5        &kp F6      &kp F7             &kp F8           &kp F9  &kp F10  &tog 1
+&tog 4  &kp F11  &kp F12  &kp K_VOLUME_UP  &kp K_VOLUME_DOWN  &kp K_MUTE    &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &none   &none    &tog 4
+&tog 9  &none    &trans   &trans           &trans             &mo 8         &none       &none              &none            &none   &none    &tog 9
+                          &trans           &trans             &none         &none       &trans             &trans
             >;
 
             label = "Setup";
