@@ -18,21 +18,18 @@
         mt_balanced: mt_balanced {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_BALANCED";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             global-quick-tap;
             flavor = "balanced";
         };
+
         mt_hold: mt_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_HOLD";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -52,7 +49,7 @@
 
             label = "Base";
             bindings = <
-&kp TAB                     &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y                      &kp U  &kp I                   &kp O                &kp P               &kp BACKSLASH
+&kp TAB                     &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y                      &kp U  &kp I                   &kp O                &kp P               &gresc
 &kp BACKSPACE               &kp A  &kp S  &kp D             &kp F  &kp G        &kp H                      &kp J  &kp K                   &kp L                &kp SEMI            &kp SQT
 &mt_hold LEFT_SHIFT ESCAPE  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N                      &kp M  &mt LEFT_CONTROL COMMA  &mt LEFT_ALT PERIOD  &mt LEFT_GUI SLASH  &kp ENTER
                                           &kp LEFT_CONTROL  &mo 2  &kp SPACE    &mt_hold LEFT_SHIFT SPACE  &mo 3  &kp LEFT_GUI
@@ -79,7 +76,7 @@
 
             label = "Number";
             bindings = <
-&trans  &sk LEFT_CONTROL  &kp N7  &kp N8  &kp N9  &kp N0       &kp QUESTION   &kp SLASH       &kp BACKSLASH    &kp PIPE          &kp GRAVE      &kp BSLH
+&trans  &sk LEFT_CONTROL  &kp N7  &kp N8  &kp N9  &kp N0       &kp QUESTION   &kp SLASH       &kp BACKSLASH    &kp PIPE          &kp GRAVE      &trans
 &trans  &sk LEFT_ALT      &kp N4  &kp N5  &kp N6  &kp COMMA    &kp LEFT       &kp DOWN        &kp UP_ARROW     &kp RIGHT         &kp SEMICOLON  &kp SQT
 &trans  &sk LGUI          &kp N1  &kp N2  &kp N3  &kp DOT      &kp LESS_THAN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp SLASH      &trans
                                   &trans  &trans  &trans       &trans         &mo 7           &trans
@@ -95,7 +92,7 @@
 
             label = "Symbol";
             bindings = <
-&trans  &sk LEFT_CONTROL  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL         &kp PLUS              &kp MINUS              &kp UNDERSCORE     &kp TILDE     &kp PIPE
+&trans  &sk LEFT_CONTROL  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL         &kp PLUS              &kp MINUS              &kp UNDERSCORE     &kp TILDE     &trans
 &trans  &sk LEFT_ALT      &kp DOLLAR       &kp PERCENT   &kp CARET             &kp GRAVE                &kp LEFT          &kp DOWN              &kp UP                 &kp RIGHT          &kp COLON     &kp DOUBLE_QUOTES
 &trans  &sk LEFT_GUI      &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp TILDE                &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp QUESTION  &trans
                                            &trans        &mo 7                 &trans                   &trans            &trans                &trans
@@ -104,10 +101,10 @@
 
         layer_base_reverse {
             bindings = <
-&kp BSLH  &kp P     &kp O    &kp I         &kp U  &kp Y                        &kp T      &kp R  &kp E             &kp W  &kp Q  &kp TAB
-&kp SQT   &kp SEMI  &kp L    &kp K         &kp J  &kp H                        &kp G      &kp F  &kp D             &kp S  &kp A  &kp BSPC
-&kp RET   &kp FSLH  &kp DOT  &kp COMMA     &kp M  &kp N                        &kp B      &kp V  &kp C             &kp X  &kp Z  &mt_hold RSHFT ESCAPE
-                             &kp LEFT_GUI  &mo 6  &mt_hold LEFT_SHIFT SPACE    &kp SPACE  &mo 5  &kp LEFT_CONTROL
+&gresc   &kp P     &kp O    &kp I         &kp U  &kp Y                        &kp T      &kp R  &kp E             &kp W  &kp Q  &kp TAB
+&kp SQT  &kp SEMI  &kp L    &kp K         &kp J  &kp H                        &kp G      &kp F  &kp D             &kp S  &kp A  &kp BSPC
+&kp RET  &kp FSLH  &kp DOT  &kp COMMA     &kp M  &kp N                        &kp B      &kp V  &kp C             &kp X  &kp Z  &mt_hold RSHFT ESCAPE
+                            &kp LEFT_GUI  &mo 6  &mt_hold LEFT_SHIFT SPACE    &kp SPACE  &mo 5  &kp LEFT_CONTROL
             >;
 
             label = "BaseR";
